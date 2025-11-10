@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio — Mis proyectos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Mi Portafolio</h1>
+        <p class="lead">Proyectos Android listos para probar — descarga el APK y lee la explicación.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="project-card">
+        <div class="project-info">
+          <div class="project-visual">
+            <!-- Usar imagen del proyecto (armadillo) ubicada en assets/image.png -->
+            <img src="assets/image.png" alt="Vista previa del proyecto" />
+          </div>
+          <h2>Guru App — Venta de artesanías</h2>
+          <p class="subtitle">Aplicación multiplataforma (Flutter) para que artesanos publiquen y vendan sus productos, llegando a más personas sin importar la distancia.</p>
+
+          <div class="buttons">
+            <!-- APK incluida en assets: app-release.apk (nombre corregido) -->
+            <a class="btn download" href="assets/app-release.apk" download>Descargar APK</a>
+            <!-- Enlaces a repositorios y backend -->
+            <a class="btn repo" href="https://github.com/gato200308/guru-flutter.git" target="_blank" rel="noopener">Código (Flutter)</a>
+            <a class="btn repo" href="https://github.com/gato200308/backendguru.git" target="_blank" rel="noopener">API (backend)</a>
+          </div>
+        </div>
+        <br />
+        <div class="project-meta">
+          <h3>Explicación</h3>
+          <p>
+            <strong>Guru App</strong> es una app de ventas de artesanías desarrollada en Flutter y
+            con un backend en PHP desplegado en la nube. Permite a artesanos registrarse, crear y
+            publicar sus productos (imágenes, descripción, precio), gestionar inventario, recibir
+            pedidos y comunicarse con clientes. La idea es ayudar a los artesanos a llegar a más
+            compradores sin importar la distancia geográfica.
+          </p>
+
+          <h4>Funcionalidades clave</h4>
+          <ul>
+            <li>Registro e inicio de sesión de usuarios (artesanos y compradores).</li>
+            <li>Edición de perfil y foto de usuario.</li>
+            <li>Publicación de productos: subir imágenes, título, descripción y precio.</li>
+            <li>Listado y detalle de productos con búsqueda y filtrado.</li>
+            <li>Carrito de compras, gestión de pedidos y historial.</li>
+            <li>Sistema de favoritos y reseñas de productos.</li>
+            <li>Integración con el backend PHP que gestiona datos y persistencia (MySQL).</li>
+            <li>Soporte multiplataforma: Android, Web, Windows, Linux y macOS.</li>
+          </ul>
+
+          <h4>Cómo conectar con tu backend</h4>
+          <p>
+            La URL base del API está configurada en el código cliente en <code>lib/config/api_config.dart</code>
+            (repositorio del cliente: <a href="https://github.com/gato200308/guru-flutter" target="_blank" rel="noopener">guru-flutter</a>). En producción tu backend público es:
+            <a href="https://gurubackend.usbtopia.usbbog.edu.co/" target="_blank" rel="noopener">https://gurubackend.usbtopia.usbbog.edu.co/</a>.
+            Para pruebas locales ajusta la URL al host/puerto donde ejecutes tu API (por ejemplo <code>http://192.168.X.Y:8000</code> o usa <code>10.0.2.2</code> si pruebas desde el emulador Android estándar).
+          </p>
+
+          <h4>Instalación</h4>
+          <ol>
+            <li>Descarga el APK con el botón "Descargar APK" (archivo incluido: <code>assets/app-release.apk</code>).</li>
+            <li>En tu dispositivo Android, habilita la instalación desde orígenes desconocidos (si aplica).</li>
+            <li>Abre el archivo descargado y sigue las instrucciones.</li>
+          </ol>
+
+          <h4>Detalles técnicos</h4>
+          <ul>
+            <li>Versión: 1.0.0</li>
+            <li>Build: 2025-11-10</li>
+            <li>Permisos principales: Cámara, Almacenamiento (si aplica)</li>
+            <li>Cliente (Flutter): <a href="https://github.com/gato200308/guru-flutter.git" target="_blank" rel="noopener">github.com/gato200308/guru-flutter</a></li>
+            <li>API / Backend: <a href="https://github.com/gato200308/backendguru.git" target="_blank" rel="noopener">github.com/gato200308/backendguru</a></li>
+            <li>Backend público (producción): <a href="https://gurubackend.usbtopia.usbbog.edu.co/" target="_blank" rel="noopener">gurubackend.usbtopia...</a></li>
+          </ul>
+
+          <h4>Notas</h4>
+          <p>
+            Para producir/compartir el APK en producción es preferible usar GitHub Releases, Google Drive/Cloud
+            Storage o un CDN y enlazar aquí. Evita subir APKs a repositorios públicos si contienen claves
+            o datos sensibles.
+          </p>
+
+          <h4>Probar con el backend (local y producción)</h4>
+          <p>
+            - En producción tu backend está en: <a href="https://gurubackend.usbtopia.usbbog.edu.co/" target="_blank" rel="noopener">https://gurubackend.usbtopia.usbbog.edu.co/</a>.
+            - Para pruebas locales ejecuta tu API (por ejemplo con PHP y Apache) en tu máquina y usa la IP de tu equipo seguida del puerto (por ejemplo <code>http://192.168.1.5:8000</code>) como base URL en la app.
+          </p>
+          <p>
+            Si pruebas en un emulador Android que corre en la misma máquina que el backend, recuerda que en emulador Android los hosts locales usan <code>10.0.2.2</code> (Android Emulator) o la IP de la máquina si usas un dispositivo físico.
+          </p>
+        </div>
+      </section>
+
+      <!-- Sección de contribuyentes (detalle) integrada en la página principal -->
+      <section class="contributors">
+        <h3>Equipo</h3>
+        <div class="contributors-grid">
+          <article class="contrib-card">
+            <img class="avatar" src="assets/avatars/santiagomolina.png" alt="Santiago Molina" />
+            <h4>Santiago Molina</h4>
+            <p class="role">Lead Mobile Engineer / Flutter Developer</p>
+            <p>Autor principal y responsable del cliente Flutter: diseño de la app, integración con API y despliegues multiplataforma.</p>
+            <p><a href="https://github.com/gato200308" target="_blank" rel="noopener">Perfil GitHub</a></p>
+          </article>
+
+          <article class="contrib-card">
+            <img class="avatar" src="assets/avatars/david.png" alt="David (ALEJANDROZAID010)" />
+            <h4>David</h4>
+            <p class="role">Backend Engineer / DevOps</p>
+            <p>Encargado del backend PHP, endpoints y la base de datos MySQL; apoyo en despliegues y configuración del servidor.</p>
+            <p><a href="https://github.com/ALEJANDROZAID010" target="_blank" rel="noopener">Perfil GitHub</a></p>
+          </article>
+
+          <article class="contrib-card">
+            <img class="avatar" src="assets/avatars/santiagocastañeda.png" alt="Santiago Castañeda" />
+            <h4>Santiago Castañeda</h4>
+            <p class="role">Full-stack Developer / QA</p>
+            <p>Colaborador en desarrollo de funciones, pruebas y mejoras; soporte en integración entre cliente y servidor.</p>
+            <p><a href="https://github.com/santiagoct123" target="_blank" rel="noopener">Perfil GitHub</a></p>
+          </article>
+        </div>
+        <p style="margin-top:12px"><a class="btn small" href="contributors.html">Ver más detalles</a></p>
+      </section>
+
+      <section class="screenshots">
+        <h3>Capturas</h3>
+        <div class="shots">
+          <div class="shot">Placeholder imagen 1</div>
+          <div class="shot">Placeholder imagen 2</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="copyright">© 2025 Guru App. Todos los derechos reservados.</div>
+        <div style="margin-top:6px"><a href="contributors.html">Contribuidores</a> · <a href="https://github.com/gato200308/guru-flutter" target="_blank" rel="noopener">Repositorio</a></div>
+      </div>
+    </footer>
+  </body>
+</html>

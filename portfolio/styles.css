@@ -1,0 +1,74 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#4f46e5;
+  --accent-2:#06b6d4;
+  --text:#e6eef8;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--bg),#081024);
+  color:var(--text);
+}
+.container{max-width:980px;margin:0 auto;padding:28px}
+.site-header{padding:24px 0}
+.site-header h1{margin:0;font-size:28px}
+.lead{color:var(--muted);margin-top:6px}
+.project-card{grid-template-columns:1fr 360px;gap:24px;background:var(--card);padding:20px;border-radius:12px}
+.project-visual img{display:block;width:100%;max-width:420px;height:auto;object-fit:cover;border-radius:10px;margin:0 0 12px}
+.project-info h2{margin:0}
+.subtitle{color:var(--muted);margin-top:6px}
+.buttons{margin-top:14px}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--text);margin-right:8px}
+.btn.download{background:linear-gradient(90deg,var(--accent),var(--accent-2));}
+.btn.repo{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);}
+.project-meta h3{margin-top:0}
+.screenshots{margin-top:18px}
+.shots{display:flex;gap:12px}
+.shot{flex:1;min-height:120px;background:#071025;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.site-footer{padding:18px 0;text-align:center;color:var(--muted)}
+
+/* Contributors page styles */
+.contributors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:18px}
+.contrib-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:10px;text-align:center}
+.avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;margin-bottom:10px;border:2px solid rgba(255,255,255,0.04)}
+.contrib-card h4{margin:6px 0 2px}
+.contrib-card p{margin:6px 0;color:var(--muted)}
+
+/* top nav and small button */
+.top-nav{margin-top:12px;margin-bottom:8px}
+.btn.small{display:inline-block;padding:6px 10px;border-radius:8px;text-decoration:none;color:var(--text);background:transparent;border:1px solid rgba(255,255,255,0.04);font-size:14px}
+.btn.small:hover{background:rgba(255,255,255,0.02)}
+
+/* link style inside contrib cards */
+.contrib-card p a{color:var(--accent-2);text-decoration:none}
+.contrib-card p a:hover{text-decoration:underline}
+
+/* subtle hover for cards */
+.contrib-card{transition:transform .14s ease, box-shadow .14s ease}
+.contrib-card:hover{transform:translateY(-6px);box-shadow:0 8px 24px rgba(0,0,0,0.35)}
+
+/* Contributors preview on index */
+.contributors-preview{margin-top:22px;padding:16px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border-radius:10px}
+.contributors-preview-grid{display:flex;gap:18px}
+.mini-contrib img{width:64px;height:64px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 8px}
+.mini-contrib .name{text-align:center;color:var(--text);font-weight:600}
+
+/* Footer professional text */
+.site-footer{padding:18px 0;text-align:center;color:var(--muted)}
+.site-footer .copyright{color:var(--muted)}
+
+@media (max-width:1000px){
+  .project-card{grid-template-columns:1fr}
+  .project-visual img{max-width:100%;height:auto}
+  .contributors-preview-grid{flex-direction:row;justify-content:space-between}
+}
+
+@media (max-width:850px){
+  .project-card{grid-template-columns:1fr}
+  .project-meta{order:2}
+}
